@@ -1,0 +1,43 @@
+//FROM: https://articles.microservices.com/an-alternative-way-of-visualizing-microservice-architecture-837cbee575c1
+//run with: cat graphviz.dot | docker container run --rm -i vladgolubev/dot2png > file.png
+
+digraph architecture {
+  rankdir=LR;
+
+  // Client-side Apps - #FFEB3B (yellow)
+  node[fillcolor="#FFEB3B" style="filled" fontcolor="black"];
+  front_end[label="Frontend/Client"];
+  
+  // Microservices - #C8E6C9 (light green)
+  node[fillcolor="#C8E6C9" style="filled" fontcolor="black"];
+  counter_ms[label="Counter MS"];
+  discovery_service[label="Discovery"];
+  admin_service[label="Admin Service"];
+  config_service[label="Config Service"];
+
+  // API Gateways - #FFCCBC (light orange)
+  node[fillcolor="#FFCCBC" style="filled" fontcolor="black"];
+  edge_service[label="Edge Service"];
+  
+  // 3rd-party APIs - #CFD8DC (light grey)
+  node[fillcolor="#CFD8DC" style="filled" fontcolor="black"];
+  
+  
+  subgraph client_side_apps {
+      front_end -> {edge_service};
+      
+      {rank=same; front_end};
+  }
+  
+  subgraph api_gateways {
+      edge_service -> {admin_service, discovery_service, counter_ms};
+      //user_service, admin_service, counter_ms -> discovery_service;
+  }
+
+  subgraph microservice {
+      admin_service -> {counter_ms};
+      {rank=same; discovery_service, counter_ms, config_service};
+
+  }
+  
+}
