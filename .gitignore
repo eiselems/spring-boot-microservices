@@ -23,3 +23,20 @@ hs_err_pid*
 
 #MAC
 .DS_STORE
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
