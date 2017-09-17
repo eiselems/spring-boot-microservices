@@ -1,6 +1,7 @@
-version: '3'
+version: '2'
 services:
   counterservice:
     build: counterservice
+    mem_limit: 512M
     ports:
       - "8080:8080"
