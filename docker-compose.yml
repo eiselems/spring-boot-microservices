@@ -5,3 +5,8 @@ services:
     mem_limit: 512M
     ports:
       - "8080:8080"
+  configservice:
+      build: configservice
+      mem_limit: 512M
+      ports:
+        - "8888:8080"
