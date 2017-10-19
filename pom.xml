@@ -12,6 +12,7 @@
         <module>counterservice</module>
         <module>configservice</module>
         <module>registryservice</module>
+        <module>gatewayservice</module>
     </modules>
 
 </project>
