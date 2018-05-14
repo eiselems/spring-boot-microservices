@@ -1,17 +1,28 @@
 version: '2'
 services:
-  counterservice:
-    build: counterservice
-    mem_limit: 512M
-    ports:
-      - "8080:8080"
-  configservice:
-      build: configservice
-      mem_limit: 512M
-      ports:
-        - "8888:8888"
-  registryservice:
-      build: registryservice
-      mem_limit: 512M
-      ports:
-        - "8761:8761"
+    registryservice:
+        build: registryservice
+        mem_limit: 512M
+        ports:
+            - "8761:8761"
+    configservice:
+        build: configservice
+        mem_limit: 512M
+        ports:
+            - "8888:8888"
+    counterservice:
+        build: counterservice
+        mem_limit: 512M
+        ports:
+            - "8080:8080"
+    gatewayservice:
+        build: gatewayservice
+        mem_limit: 512M
+        ports:
+            - "9999:9999"
+        links:
+            - counterservice:counterservice
+            - registryservice:registryservice
+        depends_on:
+            - counterservice
+            - registryservice
