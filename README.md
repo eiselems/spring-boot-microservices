@@ -9,7 +9,8 @@ Here are the links to all parts of the series:
 * [Part 2: The architecture](https://medium.com/@marcus.eisele/microservices-with-mo-part-two-the-architecture-3845b5228ddb "Microservices with Mo - Part Two: The architecture")
 * [Part 3: The counter microservice](https://medium.com/@marcus.eisele/microservices-with-mo-part-three-the-counter-microservice-5fa34af2dcdc "Microservices with Mo — Part Three: The Counter Microservice")
 * [Part 4: The configuration microservice](https://medium.com/@marcus.eisele/microservices-with-mo-part-four-the-configuration-service-7d9a5b1b4f72 "Microservices with Mo — Part Four: The Configuration Service")
-* [Part 5: The configuration microservice](https://medium.com/@marcus.eisele/microservices-with-mo-part-five-the-registry-service-netflix-eureka-96f0de083252 "Microservices with Mo — Part Five: The Registry Service (Netflix Eureka)")
+* [Part 5: The registry microservice](https://medium.com/@marcus.eisele/microservices-with-mo-part-five-the-registry-service-netflix-eureka-96f0de083252 "Microservices with Mo — Part Five: The Registry Service (Netflix Eureka)")
+* [Part 6: The gateway microservice](https://medium.com/@marcus.eisele/spring-boot-microservices-part-six-the-gateway-service-netflix-zuul-55f8d97b731d "Microservices with Mo — Part Six: The Gateway Service (Netflix Zuul)")
 
 
 The architecture consists / will consist of following services:
