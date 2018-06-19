@@ -15,6 +15,11 @@ services:
         mem_limit: 512M
         ports:
             - "8080:8080"
+    countconsumerservice:
+        build: countconsumerservice
+        mem_limit: 512M
+        ports:
+            - "8181:8181"
     gatewayservice:
         build: gatewayservice
         mem_limit: 512M
